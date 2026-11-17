@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: order-service
+
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JacksonJsonSerializer
+    topic:
+      name: order_topics
+      second-name: order_list
+
+
+server:
+  port: 8080
+
